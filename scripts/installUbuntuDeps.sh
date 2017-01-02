@@ -151,7 +151,7 @@ install_mediadeps(){
   if [ -d $LIB_DIR ]; then
     cd $LIB_DIR
     if [ ! -f ./libav-11.1.tar.gz ]; then
-      curl -O https://www.libav.org/releases/libav-11.1.tar.gz
+      curl -Ok https://www.libav.org/releases/libav-11.1.tar.gz
       tar -zxvf libav-11.1.tar.gz
       cd libav-11.1
       PKG_CONFIG_PATH=${PREFIX_DIR}/lib/pkgconfig ./configure --prefix=$PREFIX_DIR --enable-shared --enable-gpl --enable-libvpx --enable-libx264 --enable-libopus
@@ -174,7 +174,7 @@ install_mediadeps_nogpl(){
   if [ -d $LIB_DIR ]; then
     cd $LIB_DIR
     if [ ! -f ./libav-11.1.tar.gz ]; then
-      curl -O https://www.libav.org/releases/libav-11.1.tar.gz
+      curl -Ok https://www.libav.org/releases/libav-11.1.tar.gz
       tar -zxvf libav-11.1.tar.gz
       cd libav-11.1
       PKG_CONFIG_PATH=${PREFIX_DIR}/lib/pkgconfig ./configure --prefix=$PREFIX_DIR --enable-shared --enable-gpl --enable-libvpx --enable-libopus
